@@ -1,9 +1,13 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import { ContainerLoading } from './styles';
+import Logo from '../../img/logo-loading-page.png'
 
 function Loading() {
-  return <div />;
+  return (
+    <ContainerLoading>
+      <img src={Logo} alt="Logo Grupo Boticário"/>
+    </ContainerLoading>
+  )
 }
 
 export default Loading;

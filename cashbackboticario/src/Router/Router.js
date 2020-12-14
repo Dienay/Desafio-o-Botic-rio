@@ -5,11 +5,6 @@ import CreateUserPage from '../CreateUserPage';
 import ListPage from '../ListPage';
 import LoginPage from '../LoginPage';
 import RegisterProductPage from '../RegisterProductPage';
-// import BalancePage from "../BalancePage";
-// import CreateUserPage from "../CreateUserPage";
-// import ListPage from "../ListPage";
-// import LoginPage from "../LoginPage";
-// import RegisterProductPage from "../RegisterProductPage";
 
 function Router() {
     return (
