@@ -1,25 +1,94 @@
-import React from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { Container, Form, Header } from './styles';
 import Logo from '../img/logo.png'
 import Button from 'react-bootstrap/Button';
-import Menu from '../Componets/Menu';
+import Menu from '../Components/Components';
+import useForm from '../Hooks/useForm';
+import * as data from '../data.json'
+import ListContext from '../Contexts/ListContext';
 
 function RegisterProductPage() {
+  const listContext = useContext(ListContext)
+  const setListContext = useContext(ListContext)
+  const {form, onChange} = useForm({cod: "", value: "", date: ""})
+  const [date, setDate] = useState("")
+
+  const handleInputChange = (event) => {
+    const {name, value} = event.target
+    onChange(name, value)
+  }
+
+  useEffect (() => {
+    const date = new Date(form.date),
+     day  = (date.getDate()+1).toString().padStart(2, '0'),
+     month  = (date.getMonth()+1).toString().padStart(2, '0'),
+     year  = date.getFullYear()
+     return setDate(day+"/"+month+"/"+year)
+   },[form.date])
+
+  const inputData = () => {
+    if(!form.cod || !form.value || !form.date) {
+      alert("Todos os campos são obrigatórios")
+    }
+
+    const status = ["Aprovado", "Em validação", "Reprovado"]
+    const statusCurrent = status[Math.floor(Math.random() * 3)]
+
+    const body = {
+      "cod": form.cod,
+      "value": form.value,
+      "date": date,
+      "status": statusCurrent
+    }
+
+    let list = listContext.listContext
+
+    list.push(body)
+
+    setListContext.setListContext(list)
+
+    alert("Compra adicionada com sucesso!")
+  }
+
   return (
     <Container>
       <Header>
         <figure>
-          <img src={Logo} />
+          <img src={Logo} alt="Logo Grupo Boticário"/>
         </figure>
       </Header>
       <Form>
         <h2>Cadastrar compra</h2>
         <fieldset>
-          <input placeholder="Código da compra" />
-          <input placeholder="Valor" />
-          <input placeholder="Data da compra" />
+          <input
+            id="cod"
+            value={form.cod}
+            onChange={handleInputChange}
+            type="text"
+            name="cod" 
+            required
+            placeholder="Código da compra" 
+          />
+          <input
+            id="value"
+            value={form.value}
+            onChange={handleInputChange}
+            type="number"
+            name="value" 
+            required
+            placeholder="Valor"
+          />
+          <input
+            id="date"
+            value={form.date}
+            onChange={handleInputChange}
+            type="date"
+            name="date" 
+            required
+            placeholder="Data da compra"
+          />
         </fieldset>
-        <Button variant="secondary" size="lg" block>
+        <Button onClick={inputData} variant="secondary" size="lg" block>
           Cadastrar
         </Button>
       </Form>

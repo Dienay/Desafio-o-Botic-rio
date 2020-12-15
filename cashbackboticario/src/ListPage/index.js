@@ -1,25 +1,19 @@
-import React, { useEffect, useState } from 'react';
-import Loading from '../Componets/Loading';
-import Menu from '../Componets/Menu';
-import * as data from '../data.json'
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useContext, useEffect, useState } from 'react';
+import Loading from '../Components/Loading';
+import Menu from '../Components/Components';
+import ListContext from '../Contexts/ListContext';
 import { Container, Header, Items, SmallCard } from './styles';
+import useCashbackReturned from '../Hooks/useCashbackReturned';
+import useConvertToCash from '../Hooks/useConvertToCash';
 
 function ListPage() {
-    const [list, setList] = useState([])
+    const listContext = useContext(ListContext)
     const [loading, setLoading] = useState(true)
 
     useEffect(()=> {
-        getList()
         simulateLoading()
     },[])
-
-    const getList = async () => {
-        try {
-            setList(data.default)
-        } catch (error) {
-            console.log(error, "Erro")
-        }
-    }
 
     const handleCashback = (value) => {
         let percentageCashback = 10
@@ -34,29 +28,10 @@ function ListPage() {
         }
     }
 
-    const convertToCash = (value) => {
-        let result = parseFloat(value).toFixed(2).replace('.',',')
-        return result
-    }
-
     const simulateLoading = () => {
         setTimeout(
             () => setLoading(false),3000
         )
-    }
-
-    const cashbackReturned = (value) => {
-        let result = 0
-        if(value <= 1000) {
-            result = value * 0.1
-            return result
-        } else if(value > 1000 && value < 1500) {
-            result = value * 0.15
-            return result
-        } else {
-            result = value * 0.2
-            return result
-        }
     }
 
   return (
@@ -71,19 +46,19 @@ function ListPage() {
                 <h2>Minhas compras</h2>
             </Header>
             <Items>
-                {list.map((item) => {
+                {listContext.listContext.map((item) => {
                     return (
-                        <li>
+                        <li key={item.cod}>
                             <div>
                                 <p>Código da compra: {item.cod}</p>
-                                <p>Valor total: R$ {convertToCash(item.value)}</p>
+                                <p>Valor total: R$ {useConvertToCash(item.value)}</p>
                                 <p>Data: {item.date}</p>
                                 <p>status: {item.status}</p>
                             </div>
                             <SmallCard>
                                 <h3>{handleCashback(item.value)}% de</h3>
                                 <h3>Cashback</h3>
-                                <h3>+ R${convertToCash(cashbackReturned(item.value))}</h3>
+                                <h3>+ R${useConvertToCash(useCashbackReturned(item.value))}</h3>
                             </SmallCard>
                         </li>
                     )
