@@ -2,11 +2,10 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 120px 4fr;
     align-items: center;
-    justify-content: center;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
 
 `
 
@@ -14,8 +13,9 @@ export const Form = styled.form`
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    margin: 0 auto;
     padding: 40px 0;
+    max-width: 400px;
     width: 90vw;
 
     h2 {
@@ -36,7 +36,7 @@ export const Form = styled.form`
         border-radius: 0;
         font-size: 14px;
         font-weight: bold;
-        margin-top: 8px;
+        margin: 8px 0;
         text-transform: uppercase;
         width: 320px;
     }

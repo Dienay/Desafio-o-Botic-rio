@@ -5,6 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import { useHistory } from 'react-router-dom';
 import useForm from '../Hooks/useForm';
 import Header from '../Components/Header/index';
+import Menu from '../Components/Menu';
 
 function LoginPage() {
   const history = useHistory()
@@ -68,6 +69,7 @@ function LoginPage() {
           <Nav.Link href="/criar-usuario">Cadastar usuário</Nav.Link>
         </Nav.Item>
       </Form>
+      <Menu />
     </Container>
   )
 }

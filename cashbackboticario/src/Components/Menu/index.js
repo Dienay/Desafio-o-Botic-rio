@@ -4,6 +4,7 @@ import { ContainerMenu } from './styles';
 import Home from '../../img/home.svg'
 import Dollar from '../../img/dollar.svg'
 import Plus from '../../img/plus.svg'
+import User from '../../img/user.svg'
 
 function Menu() {
   const history = useHistory()
@@ -11,6 +12,7 @@ function Menu() {
   const onClickMenu = (tela) => {
     history.push(tela)
   }
+  
   return (
     <ContainerMenu>
       <div onClick={() => onClickMenu("/")}>
@@ -21,6 +23,9 @@ function Menu() {
       </div>
       <div onClick={() => onClickMenu("/registrar-produto")}>
         <img src={Plus} alt="Adicionar compra" />
+      </div>
+      <div onClick={() => onClickMenu("/usuario")}>
+        <img src={User} alt="Usuário" />
       </div>
     </ContainerMenu>
   )

@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-    
+export const List = styled.div`
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1350px;
 `
 
-export const Header = styled.div`
+export const Title = styled.div`
     h2 {
         border-bottom: 1px solid #C4C4C4;
         padding: 8px 0;
@@ -34,6 +36,10 @@ export const Items = styled.ul`
 
     p {
         margin: 0;
+    }
+
+    @media only screen and (min-width: 500px) {
+        li{border: 1px solid #C4C4C4;}
     }
 
 `

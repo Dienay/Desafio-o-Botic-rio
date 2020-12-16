@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import useForm from '../Hooks/useForm';
 import { useHistory } from 'react-router-dom';
+import Menu from '../Components/Menu';
 
 function CreateUserPage() {
   const history = useHistory()
@@ -90,6 +91,7 @@ function CreateUserPage() {
             <Nav.Link href="/Login">Login</Nav.Link>
           </Nav.Item>
         </Form>
+        <Menu />
     </Container>
   )
 }

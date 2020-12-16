@@ -5,6 +5,7 @@ import CreateUserPage from '../CreateUserPage';
 import ListPage from '../ListPage';
 import LoginPage from '../LoginPage';
 import RegisterProductPage from '../RegisterProductPage';
+import UserPage from '../UserPage';
 
 function Router() {
     return (
@@ -24,6 +25,9 @@ function Router() {
                 </Route>
                 <Route exact path="/saldo">
                     <BalancePage />
+                </Route>
+                <Route exact path="/usuario">
+                    <UserPage />
                 </Route>
             </Switch>
         </BrowserRouter>
