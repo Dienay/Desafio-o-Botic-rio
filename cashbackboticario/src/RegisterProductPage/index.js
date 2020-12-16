@@ -1,10 +1,9 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { Container, Form, Header } from './styles';
-import Logo from '../img/logo.png'
+import Header from '../Components/Header/index';
+import { Container, Form } from '../GlobalStyles/GlobalStyle';
 import Button from 'react-bootstrap/Button';
-import Menu from '../Components/Components';
+import Menu from '../Components/Menu';
 import useForm from '../Hooks/useForm';
-import * as data from '../data.json'
 import ListContext from '../Contexts/ListContext';
 
 function RegisterProductPage() {
@@ -52,11 +51,7 @@ function RegisterProductPage() {
 
   return (
     <Container>
-      <Header>
-        <figure>
-          <img src={Logo} alt="Logo Grupo Boticário"/>
-        </figure>
-      </Header>
+      <Header />
       <Form>
         <h2>Cadastrar compra</h2>
         <fieldset>

@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext, useEffect, useState } from 'react';
 import Loading from '../Components/Loading';
-import Menu from '../Components/Components';
+import Menu from '../Components/Menu';
 import ListContext from '../Contexts/ListContext';
 import { Container, Header, Items, SmallCard } from './styles';
 import useCashbackReturned from '../Hooks/useCashbackReturned';

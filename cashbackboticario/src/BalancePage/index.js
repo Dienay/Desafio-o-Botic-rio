@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useContext, useEffect, useState } from 'react';
-import { Container, Balance, Header } from './styles';
-import Logo from '../img/logo.png'
-import Menu from '../Components/Components';
+import Header from '../Components/Header/index';
+import { Container } from '../GlobalStyles/GlobalStyle';
+import { Balance} from './styles';
+import Menu from '../Components/Menu';
 import ListContext from '../Contexts/ListContext';
 import useCashbackReturned from '../Hooks/useCashbackReturned';
 import useConvertToCash from '../Hooks/useConvertToCash';
@@ -32,11 +33,7 @@ function BalancePage() {
    
   return (
     <Container>
-      <Header>
-        <figure>
-          <img src={Logo} alt="Logo Grupo Boticário"/>
-        </figure>
-      </Header>
+      <Header />
       <Balance>
         <h1>Cashback</h1>
         <h2>Saldo:</h2>
