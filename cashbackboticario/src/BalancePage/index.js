@@ -1,38 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Balance, Header } from './styles';
-import Logo from '../img/logo.png'
-import Menu from '../Componets/Menu';
-import * as data from '../data.json'
+/* eslint-disable react-hooks/rules-of-hooks */
+import React, { useContext, useEffect, useState } from 'react';
+import Header from '../Components/Header/index';
+import { Container } from '../GlobalStyles/GlobalStyle';
+import { Balance} from './styles';
+import Menu from '../Components/Menu';
+import ListContext from '../Contexts/ListContext';
+import useCashbackReturned from '../Hooks/useCashbackReturned';
+import useConvertToCash from '../Hooks/useConvertToCash';
 
 function BalancePage() {
-  const [list, setList] = useState([])
+  const listContext = useContext(ListContext)
   const [sum, setSum] = useState(0)
 
-  const convertToCash = (value) => {
-    let result = parseFloat(value).toFixed(2).replace('.',',')
-    return result
-  }
-
-  const cashbackReturned = (value) => {
-    let result = 0
-    if(value <= 1000) {
-        result = value * 0.1
-        return result
-    } else if(value > 1000 && value < 1500) {
-        result = value * 0.15
-        return result
-    } else {
-        result = value * 0.2
-        return result
-    }
-  }
-
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const sumCashback = () => {
     let result = 0
 
-    list.map(item => {
+    // eslint-disable-next-line array-callback-return
+    listContext.listContext.map(item => {
       if(item.status === "Aprovado") {
-        const cashback = cashbackReturned(item.value)
+        const cashback = useCashbackReturned(item.value)
         return setSum(result += cashback)
       }
 
@@ -41,22 +28,16 @@ function BalancePage() {
   }
 
   useEffect(()=> {
-    setList(data.default)
     sumCashback()
   },[sum, sumCashback])
-
    
   return (
     <Container>
-      <Header>
-        <figure>
-          <img src={Logo} alt="Logo Grupo Boticário"/>
-        </figure>
-      </Header>
+      <Header />
       <Balance>
         <h1>Cashback</h1>
         <h2>Saldo:</h2>
-        <h2>R${convertToCash(sum)}</h2>
+        <h2>R${useConvertToCash(sum)}</h2>
       </Balance>
       <Menu />
     </Container>
