@@ -13,7 +13,7 @@ describe('Boticário testes', () => {
     expect(compra).toBeInTheDocument()
   });
 
-  test('Test login', async () => {
+  test('login', async () => {
     const utils = render(<LoginPage />);
 
     const email = utils.getByPlaceholderText(/E-mail/)

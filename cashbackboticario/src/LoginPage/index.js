@@ -2,13 +2,11 @@ import React from 'react';
 import { Container, Form } from '../GlobalStyles/GlobalStyle';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import { useHistory } from 'react-router-dom';
 import useForm from '../Hooks/useForm';
 import Header from '../Components/Header/index';
 import Menu from '../Components/Menu';
 
 function LoginPage() {
-  const history = useHistory()
 
   const {form, onChange} = useForm({email: "", password: ""})
 
@@ -35,7 +33,8 @@ function LoginPage() {
       "password": form.password
     }
 
-    //history.push("/")
+    console.log(body)
+
   }
   return (
     <Container>
