@@ -25,8 +25,8 @@ Criar um sisteminha que simula um aplicação de cashback.
 - Tela de criação de usuário
 - Tela de Login
 - Tela com lista de produtos com seus status
-- Tela de saldo onde você verifica o quanto já recebeu de cashback
-- Tela de cadastro de novos produtos
+- Tela de saldo onde você verifica o quanto já recebeu de cashback(Só é contabilizado cashback com status de "Aprovado")
+- Tela de cadastro de novos produtos(o status do cashback é gerado automaticamente de forma aleatória com as opções de "Aprovado", "Em Análise" e "Reprovado".
 - E na versão mobile temos uma tela extra para navegar entre as telas de cadastro e login
 
 <br>
