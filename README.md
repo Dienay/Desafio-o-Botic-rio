@@ -4,7 +4,7 @@ Seja bem vindo(a) ao Cashback do Boticário.
 Insira as informações da sua compra e veja o quanto de cashback você pode ganhar.
 
 ## Escopo do projeto
-Criar um sisteminha que simula um aplicação de cashback.
+Criar um projeto que simula um aplicação de cashback, e que a pessoa recebe uma porcentagem específica dependendo do valor pago pela compra.
 
 <br>
 
