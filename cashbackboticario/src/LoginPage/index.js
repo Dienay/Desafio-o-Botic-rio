@@ -35,7 +35,7 @@ function LoginPage() {
       "password": form.password
     }
 
-    history.replace("/")
+    //history.push("/")
   }
   return (
     <Container>
@@ -63,7 +63,7 @@ function LoginPage() {
           />
         </fieldset>
         <Button onClick={login} variant="secondary" size="lg" block>
-          Entrar
+          Entre
         </Button>
         <Nav.Item>
           <Nav.Link href="/criar-usuario">Cadastar usuário</Nav.Link>
