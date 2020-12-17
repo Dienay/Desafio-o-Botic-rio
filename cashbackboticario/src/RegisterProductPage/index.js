@@ -5,8 +5,10 @@ import Button from 'react-bootstrap/Button';
 import Menu from '../Components/Menu';
 import useForm from '../Hooks/useForm';
 import ListContext from '../Contexts/ListContext';
+import { useHistory } from 'react-router-dom';
 
 function RegisterProductPage() {
+  const history = useHistory()
   const listContext = useContext(ListContext)
   const setListContext = useContext(ListContext)
   const {form, onChange} = useForm({cod: "", value: "", date: ""})
@@ -46,14 +48,14 @@ function RegisterProductPage() {
 
     setListContext.setListContext(list)
 
-    alert("Compra adicionada com sucesso!")
+    history.push("/")
   }
 
   return (
     <Container>
       <Header />
       <Form>
-        <h2>Cadastrar compra</h2>
+        <h2>Registrar compra</h2>
         <fieldset>
           <input
             id="cod"
@@ -83,7 +85,7 @@ function RegisterProductPage() {
             placeholder="Data da compra"
           />
         </fieldset>
-        <Button onClick={inputData} variant="secondary" size="lg" block>
+        <Button onClick={inputData} data-testid="testando" variant="secondary" size="lg" block>
           Cadastrar
         </Button>
       </Form>

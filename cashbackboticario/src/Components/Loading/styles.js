@@ -3,9 +3,9 @@ import styled from 'styled-components'
 export const ContainerLoading = styled.div`
     align-items: center;
     display: flex;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
 
     img {
         animation: fadein 1.5s ease-in-out alternate infinite;
@@ -16,5 +16,6 @@ export const ContainerLoading = styled.div`
         }
 
         width: 80vw;
+        max-width: 400px;
     }
 `

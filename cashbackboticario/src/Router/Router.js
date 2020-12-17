@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import BalancePage from '../BalancePage';
+import Loading from '../Components/Loading';
 import CreateUserPage from '../CreateUserPage';
 import ListPage from '../ListPage';
 import LoginPage from '../LoginPage';
@@ -28,6 +29,9 @@ function Router() {
                 </Route>
                 <Route exact path="/usuario">
                     <UserPage />
+                </Route>
+                <Route exact path="/loading">
+                    <Loading />
                 </Route>
             </Switch>
         </BrowserRouter>

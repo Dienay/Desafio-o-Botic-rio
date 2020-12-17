@@ -16,6 +16,7 @@ export const Title = styled.div`
 
 export const Items = styled.ul`
     padding: 8px;
+    margin-bottom: 0;
 
     li {
         display: flex;
@@ -27,7 +28,7 @@ export const Items = styled.ul`
     }
 
     li:last-child {
-        margin-bottom: 32px;
+        margin-bottom: 40px;
     }
 
     h3 {
@@ -39,7 +40,13 @@ export const Items = styled.ul`
     }
 
     @media only screen and (min-width: 500px) {
-        li{border: 1px solid #C4C4C4;}
+        li{
+            border: 1px solid #C4C4C4;
+        }
+
+        li:last-child {
+        margin-bottom: 0;
+    }
     }
 
 `
@@ -49,7 +56,21 @@ export const SmallCard = styled.div`
         padding: 8px 16px;
         text-align: center;
 
-        h3:last-child {
+        > h3 {
             color: #396C38;
         }
+
+        @media only screen and (min-width: 500px) {
+        div {
+            display: flex;
+        }
+
+        div h3:last-child {
+            margin-left: 4px;
+        }
+
+        > h3{
+            font-size: 2em;
+        }
+    }
 `
