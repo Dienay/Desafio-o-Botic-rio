@@ -3,11 +3,33 @@
 Seja bem vindo(a) ao Cashback do Boticário.
 Insira as informações da sua compra e veja o quanto de cashback você pode ganhar.
 
-### O que funciona
-- Tela de criação de usuáprio
+## Escopo do projeto
+Criar um sisteminha que simula um aplicação de cashback.
+
+<br>
+
+## Principais tecnologias/ferramentas utilizadas
+
+1. React
+2. Estilização Avançada com CSS
+3. Bootstrap
+4. Aplicações com múltiplas rotas utilizando React Router
+5. Formulários com Validação(com validação básica)
+6. Teste unitário de lógica e de componentes com react-testing-library e Jest
+7. Responsividade e adaptação de aplicação web para front.
+
+<br>
+
+### O que Tem no projeto
+- Tela de Loading
+- Tela de criação de usuário
 - Tela de Login
 - Tela com lista de produtos com seus status
 - Tela de saldo onde você verifica o quanto já recebeu de cashback
+- Tela de cadastro de novos produtos
+- E na versão mobile temos uma tela extra para navegar entre as telas de cadastro e login
+
+<br>
 
 ## Como rodar a aplicação
 
@@ -30,6 +52,8 @@ Execute a aplicação:
 ```
 npm start 
 ```
+<br>
+
 Ao executar a aplicação, se acrescentar ao final da URL ```/loading``` você verá a simulação da inicialização da aplicação.
 
 ## Versão Mobile
