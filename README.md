@@ -1,5 +1,33 @@
 # Desafio-o-Boticário
 
+Seja bem vindo(a) ao Cashback do Boticário.
+Insira as informações da sua compra e veja o quanto de cashback você pode ganhar.
+
+### O que funciona
+- Tela de criação de usuáprio
+- Tela de Login
+- Leitura de música, A lista das músicas é mostrada e ao clicar em alguma delas abre uma barra lateral com os detalhes da música.
+- Tela de criação de playlist, é necessário fornecer titulo para playlist e subtitulo, a playliste recebe a data da criação gerado no back-end.
+- Tela de listagem de playlists, na tela inicial é possível visualizar as lista de playlists.
+### O que não funciona
+- Tela de detalhes da playlist ainda não foi criada.
+- Tela para ver itens de cada critério ainda não foi criada.
+- Tela de detalhes da playlist ainda não criada.
+
+### Como rodar a aplicação
+No terminal, clone o projeto:
+
+git clone 
+Entre na pasta do projeto:
+
+cd Labenu-labefood/app
+Instale as dependências:
+
+npm install
+Execute a aplicação:
+
+npm start 
+
 ## Versão Mobile
 ![loading](https://user-images.githubusercontent.com/2151948/101921008-4059b780-3bab-11eb-9231-72df843eeacf.png)
 
