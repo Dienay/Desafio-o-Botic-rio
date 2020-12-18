@@ -78,7 +78,7 @@ Desafio-o-Boticário
 
 ## Canais de comunicação
 
-**Dienay Lima**: *Desenvolvedora web full-stack
+**Dienay Lima**: *Desenvolvedor web full-stack*
 - [Linkedin](https://www.linkedin.com/in/dienaylima/)
 - [Github](https://github.com/Dienay)
 - [Portfólio](https://dienay.github.io/portfolio/)
