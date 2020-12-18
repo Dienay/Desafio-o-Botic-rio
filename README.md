@@ -64,3 +64,24 @@ Na versão mobile o menu fica na parte inferior da tela e tem uma tela a mais pa
 
 ## Versão Desktop
 ![desktop](https://user-images.githubusercontent.com/2151948/102435882-27f7fb80-3ff6-11eb-9d3a-316ac8a94fde.png)
+
+<br>
+
+## Licença
+
+The [MIT License]() (MIT)
+
+Copyright :copyright: 2020 - 
+Desafio-o-Boticário
+
+<br>
+
+## Canais de comunicação
+
+**Dienay Lima**: *Desenvolvedora web full-stack
+- [Linkedin](https://www.linkedin.com/in/dienaylima/)
+- [Github](https://github.com/Dienay)
+- [Portfólio](https://dienay.github.io/portfolio/)
+- [Email](dienaylima@gmail.com)
+
+<br>
