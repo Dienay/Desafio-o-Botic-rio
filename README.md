@@ -25,9 +25,9 @@ Criar um projeto que simula um aplicação de cashback, e que a pessoa recebe um
 ### O que Tem no projeto
 - Tela de [Loading](http://cashback-boticario.surge.sh/loading)
 - Tela de [criação de usuário](http://cashback-boticario.surge.sh/criar-usuario)
-- Tela de Login[Login](http://cashback-boticario.surge.sh/login)
+- Tela de [Login](http://cashback-boticario.surge.sh/login)
 - Tela com [lista de produtos](http://cashback-boticario.surge.sh/) com seus status
-- Tela de saldo[saldo](http://cashback-boticario.surge.sh/saldo) onde você verifica o quanto já recebeu de cashback(Só é contabilizado cashback com status de "Aprovado")
+- Tela de [saldo](http://cashback-boticario.surge.sh/saldo) onde você verifica o quanto já recebeu de cashback(Só é contabilizado cashback com status de "Aprovado")
 - Tela de cadastro de novos produtos[cadastro de novos produtos](http://cashback-boticario.surge.sh/registrar-produto)(o status do cashback é gerado automaticamente de forma aleatória com as opções de "Aprovado", "Em Análise" e "Reprovado".
 - E na versão mobile temos uma tela extra para navegar entre as telas de cadastro e login
 
