@@ -3,6 +3,8 @@
 Seja bem vindo(a) ao Cashback do Boticário.
 Insira as informações da sua compra e veja o quanto de cashback você pode ganhar.
 
+Você pode ver o projeto funcionando neste link [Cashback o Boticário](http://cashback-boticario.surge.sh)
+
 ## Escopo do projeto
 Criar um projeto que simula um aplicação de cashback, e que a pessoa recebe uma porcentagem específica dependendo do valor pago pela compra.
 
@@ -21,7 +23,7 @@ Criar um projeto que simula um aplicação de cashback, e que a pessoa recebe um
 <br>
 
 ### O que Tem no projeto
-- Tela de Loading
+- Tela de [Loading](http://cashback-boticario.surge.sh/loading)
 - Tela de criação de usuário
 - Tela de Login
 - Tela com lista de produtos com seus status
